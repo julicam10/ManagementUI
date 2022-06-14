@@ -63,27 +63,66 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               Padding(
-                  padding: const EdgeInsets.only(top: 25),
-                  child: TextFormField(
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide.none,
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      fillColor: Colors.grey[200],
-                      filled: true,
-                      prefixIcon: const Padding(
-                        padding: EdgeInsets.only(left: 18),
-                        child: Icon(
-                          Icons.search_rounded,
-                          size: 35,
-                          color: Colors.black,
+                padding: const EdgeInsets.only(top: 25),
+                child: search_widget(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Text(
+                  'Departments',
+                  style: GoogleFonts.openSans(
+                    textStyle: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                height: 200,
+                width: double.infinity,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Container(
+                        height: 50,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                    ),
-                  ))
+                    );
+                  },
+                ),
+              )
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  TextFormField search_widget() {
+    return TextFormField(
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+        fillColor: Colors.grey[200],
+        filled: true,
+        prefixIcon: const Padding(
+          padding: EdgeInsets.only(left: 18),
+          child: Icon(
+            Icons.search_rounded,
+            size: 35,
+            color: Colors.black,
           ),
         ),
       ),
