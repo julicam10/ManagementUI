@@ -4,6 +4,7 @@ import 'package:managment_app_ui/models/categories_list.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:managment_app_ui/models/worker_info.dart';
 import 'package:managment_app_ui/models/workers_list.dart';
+import 'package:managment_app_ui/pages/info_page.dart';
 
 ListView WorkersWidgets() {
   return ListView.builder(
@@ -48,6 +49,15 @@ ListView WorkersWidgets() {
               trailing: const Icon(
                 Icons.edit_note_rounded,
                 size: 35.0,
+              ),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => WorkerInfoDetails(
+                    workers: workers,
+                    categories: categories,
+                  ),
+                ),
               ),
             ),
           ),
