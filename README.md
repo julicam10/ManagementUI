@@ -1,16 +1,12 @@
-# managment_app_ui
+# Managment_app_ui
 
-A new Flutter project.
+This is a new flutter project UI.
+I took this UI from @ZurraJanai on GitHub.
 
-## Getting Started
+This a simple UI with information about some workers
 
-This project is a starting point for a Flutter application.
+# Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+[![img1.jpg](https://i.postimg.cc/pTdQLMQt/img1.jpg)](https://postimg.cc/v1px0jSP)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![img2.jpg](https://i.postimg.cc/ZRD89sjv/img2.jpg)](https://postimg.cc/BLHLkgrJ)
