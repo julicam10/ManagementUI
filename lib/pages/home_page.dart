@@ -14,6 +14,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    var alto = MediaQuery.of(context).size.height;
     return Scaffold(
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
@@ -118,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    height: 150,
+                    height: alto * 0.2,
                     width: double.infinity,
                     child: DepartmentsWidgets(),
                   ),
@@ -135,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Container(
-                    height: 230,
+                    height: alto * 0.7,
                     width: 340,
                     child: WorkersWidgets(),
                   ),

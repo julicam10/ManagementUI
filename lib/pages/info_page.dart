@@ -17,19 +17,14 @@ class WorkerInfoDetails extends StatefulWidget {
 }
 
 class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
-  final String title1 = 'General',
-      subtitle1 =
-          '                                something here, something here, something here, something here, something here, something here';
-  final String title2 = 'Attiude',
-      subtitle2 =
-          'something here, something here, something here, something here, something here, something here';
   @override
   Widget build(BuildContext context) {
+    var alto = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: widget.categories.color,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
           child: Column(
             children: [
               RowWorkerInfo(context),
@@ -68,16 +63,13 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 15.0),
+                padding: const EdgeInsets.only(top: 30.0),
                 child: Container(
                   height: 481,
                   width: double.infinity,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0),
-                    ),
+                    borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
