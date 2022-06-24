@@ -57,85 +57,89 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: ListView(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'Today',
-                        style: GoogleFonts.openSans(
-                          textStyle: const TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Today',
+                            style: GoogleFonts.openSans(
+                              textStyle: const TextStyle(
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 5),
-                      ),
-                      Text(
-                        'Good Morning, Julian',
-                        style: GoogleFonts.openSans(
-                          textStyle: const TextStyle(
-                            fontSize: 15,
-                            color: Colors.black54,
+                          const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 5),
                           ),
-                        ),
+                          Text(
+                            'Good Morning, Julian',
+                            style: GoogleFonts.openSans(
+                              textStyle: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.black54,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
+                      Container(
+                        width: 50,
+                        height: 50,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset('assets/avatars/user1.jpg'),
+                        ),
+                      )
                     ],
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 25),
+                    child: search_widget(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      'Departments',
+                      style: GoogleFonts.openSans(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
                   Container(
-                    width: 50,
-                    height: 50,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Image.asset('assets/avatars/user1.jpg'),
+                    height: 150,
+                    width: double.infinity,
+                    child: DepartmentsWidgets(),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      'You recenty worked with',
+                      style: GoogleFonts.openSans(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
-                  )
+                  ),
+                  Container(
+                    height: 230,
+                    width: 340,
+                    child: WorkersWidgets(),
+                  ),
                 ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25),
-                child: search_widget(),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Text(
-                  'Departments',
-                  style: GoogleFonts.openSans(
-                    textStyle: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                height: 150,
-                width: double.infinity,
-                child: DepartmentsWidgets(),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Text(
-                  'You recenty worked with',
-                  style: GoogleFonts.openSans(
-                    textStyle: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              Container(
-                height: 230,
-                width: 340,
-                child: WorkersWidgets(),
               ),
             ],
           ),

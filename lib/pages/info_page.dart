@@ -113,12 +113,12 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 15.0),
+                        padding: const EdgeInsets.only(top: 20.0),
                         child: Card(),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 15.0),
-                        child: Card(),
+                        padding: const EdgeInsets.only(top: 30.0),
+                        child: Card2(),
                       )
                     ],
                   ),
@@ -137,12 +137,12 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
         height: 100,
         width: 300,
         decoration: BoxDecoration(
-          color: Colors.lightBlue.shade300,
+          color: Colors.grey.shade200,
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: ListTile(
           title: Text(
-            title1,
+            'General',
             style: GoogleFonts.openSans(
               textStyle: const TextStyle(
                 fontSize: 18,
@@ -152,7 +152,41 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
             ),
           ),
           subtitle: Text(
-            subtitle2,
+            widget.workers.general,
+            style: GoogleFonts.openSans(
+              textStyle: const TextStyle(
+                fontSize: 15,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Center Card2() {
+    return Center(
+      child: Container(
+        height: 100,
+        width: 300,
+        decoration: BoxDecoration(
+          color: Colors.grey.shade200,
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        child: ListTile(
+          title: Text(
+            'Software',
+            style: GoogleFonts.openSans(
+              textStyle: const TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          subtitle: Text(
+            widget.workers.software,
             style: GoogleFonts.openSans(
               textStyle: const TextStyle(
                 fontSize: 15,
@@ -219,7 +253,7 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
         Column(
           children: const [
             Icon(
-              Icons.access_alarm_rounded,
+              Icons.favorite,
               size: 50,
               color: Colors.red,
             ),
@@ -229,9 +263,9 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
         Column(
           children: const [
             Icon(
-              Icons.access_alarm_rounded,
+              Icons.thumb_up,
               size: 50,
-              color: Colors.red,
+              color: Colors.green,
             ),
             Text('21 thanks')
           ],
@@ -239,9 +273,9 @@ class _WorkerInfoDetailsState extends State<WorkerInfoDetails> {
         Column(
           children: const [
             Icon(
-              Icons.access_alarm_rounded,
+              Icons.military_tech,
               size: 50,
-              color: Colors.red,
+              color: Colors.blue,
             ),
             Text('43 credits')
           ],

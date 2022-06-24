@@ -6,6 +6,8 @@ class WorkerDetails {
   final Color color;
   final String job;
   final String jobTitle;
+  final String general;
+  final String software;
 
   WorkerDetails({
     required this.name,
@@ -13,5 +15,7 @@ class WorkerDetails {
     required this.color,
     required this.job,
     required this.jobTitle,
+    required this.general,
+    required this.software,
   });
 }
